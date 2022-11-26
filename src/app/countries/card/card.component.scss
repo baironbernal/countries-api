@@ -1,0 +1,15 @@
+@import '../../../sass/variables';
+
+
+.card {
+    position: relative;
+    cursor: pointer;
+    
+    &__description {
+        padding: 2em;
+        & h3 {
+            font-size: 22px;
+            margin-bottom: 1em;
+        }
+    }
+}

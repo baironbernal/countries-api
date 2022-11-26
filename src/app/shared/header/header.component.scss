@@ -1,0 +1,13 @@
+@import '../../../sass/variables';
+
+.header, .header__switch-mode {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+.header{
+      min-height: 5em;
+      &__switch-mode {
+            cursor: pointer;
+      }
+}

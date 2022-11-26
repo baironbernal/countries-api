@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Nunito+Sans:wght@300;600;800&display=swap');
+
+//widths
+$mobile: 375px;
+$desktop: 1440px;
+
+//Neutral
+
+$dark-blue: hsl(209, 23%, 22%);//(dark mode elements)
+$very-dark-blue: hsl(207, 26%, 17%); //(dark mode background)
+$very-dark-blue: hsl(200, 15%, 8%); //(light mode text)
+$dark-gray: hsl(0, 0%, 52%); //(light mode input)
+$very-light-gray: hsl(0, 0%, 98%); //(light mode background)(light mode background)
+$white: hsl(0, 0%, 100%);//(dark mode text & light mode elements)
+
+
+$font-size-home: 14px;
+$font-size-detail: 16px;
+$font-type: 'DM Sans', sans-serif;
+$weight-low: 300;
+$weight-medium: 600;
+$weight-high: 800;
+$line-height: 1.8;
+$border-radius: 6px;
+$box-shadow: rgb(0 0 0 / 15%) 0px 0px 10px 0px;

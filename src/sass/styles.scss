@@ -1,0 +1,41 @@
+@import 'variables';
+
+* {
+      margin: 0;
+      padding: 0;
+}
+*:focus {
+      outline: none;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: $dark-gray;
+      font-size: 13px;
+      opacity: 1; /* Firefox */
+}
+input {
+      border: none;
+}
+ul {
+      list-style: none;
+}
+body {
+      background-color: $very-light-gray;
+      font-family: $font-type;
+      font-size: $font-size-home;
+      line-height: $line-height;
+}
+
+
+.header, .main-container {
+      margin: 0 auto;
+      max-width: 375px;
+
+      @media(min-width: $desktop) {
+            max-width: 1260px;
+      }
+}
+
+header, .search, .card, .filter, .filter__regions {
+      border-radius: $border-radius;
+      box-shadow: $box-shadow;
+}
