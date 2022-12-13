@@ -3,10 +3,14 @@
 
 .card {
     position: relative;
-    cursor: pointer;
+    height: 23rem;
+    cursor: pointer; 
+    & img {
+        height: auto;
+    }
     
     &__description {
-        padding: 2em;
+        padding: 18px;
         & h3 {
             font-size: 22px;
             margin-bottom: 1em;

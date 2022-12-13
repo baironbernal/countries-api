@@ -4,11 +4,7 @@
 </div>
 
 <section class="content">
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
+      <div *ngFor="let country of countries; trackBy: trackByItem">
+            <app-card [country]="country"></app-card>
+      </div>
 </section>

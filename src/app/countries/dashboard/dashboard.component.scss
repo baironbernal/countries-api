@@ -1,6 +1,15 @@
+@import '../../../sass/variables';
+
 .content {
       display: grid;
-      gap: 2em;
-      grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+      gap: 4em;
+      grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
       margin-top: 2em;
+}
+.inputs {
+      @media(min-width: $desktop) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+      }
 }

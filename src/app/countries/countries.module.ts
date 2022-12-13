@@ -19,7 +19,7 @@ import { CountriesRoutingModule } from './countries-routing.module';
   ],
   imports: [
     CommonModule,
-    CountriesRoutingModule
+    CountriesRoutingModule,
   ]
 })
 export class CountriesModule { }
