@@ -7,11 +7,9 @@ import { Country } from '../models/country';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent {
-  @Input() country:any;
+  @Input() country: Country = {name: '', area: 1, capital: [], flags: {png:'', svg:'',}, population: 1, subregion: '', region: ''}
   
-
-  constructor() {
-  }
+  constructor() {}
 
   ngOnInit(): void {
     console.log(this.country)

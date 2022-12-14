@@ -1,6 +1,10 @@
+import { selectListItems } from '../../state/selectors/country.selectors';
 import { Component } from '@angular/core';
-import { DataService } from 'src/app/services/data.service';
-import { Observable } from 'rxjs';
+import { Subscription, Observable } from 'rxjs';
+import { Store } from '@ngrx/store';
+import { load } from '../../state/actions/country.actions';
+import { AppState } from 'src/app/state/app.state';
+import { Country } from '../models/country';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,35 +13,21 @@ import { Observable } from 'rxjs';
 })
 export class DashboardComponent {
 
-  countries: any[] =[];
-
-  constructor(private dataSer: DataService) {}
+  countries$: Observable<Country[]> = this.store.select(selectListItems);
+  dataSuscription: Subscription = new Subscription;
+  
+  constructor(private store: Store<AppState>) {}
 
   ngOnInit() {
-    this.getCountries()
+    this.countries$.subscribe(items => console.log(items))
+    this.store.dispatch(load())
   }
 
-  trackByItem(index: Number, item: any){
+  trackByItem(index: Number, item: any) {
     return item.id;
   } 
 
-  getCountries() {
-     this.dataSer.getDataApi().subscribe((items) => {
-      let i= items.map(e => {
-        return {
-          name: e.name.official,
-          population: e.population,
-          region: e.region,
-          subregion: e.subregion,
-          capital: e.capital,
-          flags: e.flags
-        }
-      })
-      this.countries = i;
-    });
-
-    
-
-    console.log(this.countries)
+  ngOnDestroy() {
+    //this.dataSuscription.unsubscribe()
   }
 }

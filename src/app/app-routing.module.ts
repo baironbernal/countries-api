@@ -3,8 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [{
   path: 'countries', 
-  loadChildren: () => import('src/app/countries/countries.module').then((m) => m.CountriesModule) 
-}];
+  loadChildren: () => import('src/app/countries/countries.module').then((m) => m.CountriesModule) , 
+},
+{  path: '**', redirectTo: 'countries' },];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

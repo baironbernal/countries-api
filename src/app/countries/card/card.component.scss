@@ -3,10 +3,10 @@
 
 .card {
     position: relative;
-    height: 23rem;
+    height: 18rem;
     cursor: pointer; 
     & img {
-        height: auto;
+        height: 150px;
     }
     
     &__description {

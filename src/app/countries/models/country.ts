@@ -7,5 +7,6 @@ export interface Country {
             png: string,
             svg: string
       }
+      area: number,
       capital: [] 
 }
